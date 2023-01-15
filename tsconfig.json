@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"alwaysStrict": true,
+		"module": "commonjs",
+		"declaration": false,
+		"noImplicitAny": true,
+		"skipLibCheck": true,
+		"strictNullChecks": true,
+		"removeComments": true,
+		"esModuleInterop": true,
+		"noLib": false,
+		"allowSyntheticDefaultImports": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"strictFunctionTypes": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"target": "es2018",
+		"lib": [
+			"es2018"
+		],
+		"sourceMap": true,
+		"rootDir": "./src",
+		"outDir": "./built",
+		"baseUrl": "./src"
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts"
+	]
+}

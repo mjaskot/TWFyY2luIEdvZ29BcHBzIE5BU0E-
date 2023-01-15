@@ -1,0 +1,35 @@
+{
+	"name": "TWFyY2luIEdvZ29BcHBzIE5BU0E-",
+	"version": "1.0.0",
+	"description": "Gogo apps coding assignment",
+	"main": "main.ts",
+	"repository": "git@github.com:mjaskot/TWFyY2luIEdvZ29BcHBzIE5BU0E-.git",
+	"author": "Marcin Jaskot <jaskotmarcin1@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "NODE_ENV=production node ./built/main.js",
+		"build": "tsc --p tsconfig.json",
+		"dev": "ts-node-dev ./src/main.ts"
+	},
+	"devDependencies": {
+		"@types/axios": "^0.14.0",
+		"@types/chalk": "2.2.0",
+		"@types/cors": "^2.8.12",
+		"@types/express": "^4.17.13",
+		"@types/jest": "^29.2.5",
+		"@types/node": "^17.0.23",
+		"ts-node": "^10.7.0",
+		"ts-node-dev": "^1.1.8",
+		"tsc": "^2.0.4",
+		"typescript": "^4.6.3"
+	},
+	"dependencies": {
+		"axios": "^1.2.2",
+		"axios-rate-limit": "^1.3.0",
+		"chalk": "4.1.2",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"express": "^4.17.3",
+		"jest": "^29.3.1"
+	}
+}

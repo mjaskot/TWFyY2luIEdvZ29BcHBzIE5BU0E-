@@ -1,0 +1,20 @@
+services:
+  backend:
+    container_name: url-collector
+    tty: true
+    volumes:
+      - ./:/app
+    build:
+      context: ./
+    env_file:
+      - "environmentals.env"
+    ports:
+      - "3000:3000"
+    networks:
+      - images
+    restart: "always"
+    command: sh -c "yarn dev"
+
+networks:
+  images:
+    driver: bridge
