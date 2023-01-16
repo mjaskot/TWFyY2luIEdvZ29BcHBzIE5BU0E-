@@ -1,3 +1,7 @@
+export interface PictureProvider {
+  fetchUrl(date: string): Promise<string>;
+}
+
 export type PictureApiResponse = {
   copyright: string;
   date: string;

@@ -1,7 +1,7 @@
 import { AxiosInstance } from "axios";
 
 import { PictureApiResponse } from "../pictures.types";
-import { PictureProvider } from "../interfaces/PictureProvider";
+import { PictureProvider } from "../pictures.types";
 import { getEnv, Envs } from "../../core/env";
 import StatusError from "../../errors/statusError";
 

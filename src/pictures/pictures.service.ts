@@ -1,4 +1,4 @@
-import { PictureProvider } from "./interfaces/PictureProvider";
+import { PictureProvider } from "./pictures.types";
 import { getDatesInRange } from "./_helpers/getDatesInRange";
 import { trimDate } from "./_helpers/trimDate";
 
