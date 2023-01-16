@@ -9,17 +9,17 @@ clean:
 # ==================================== BUILDING IMAGES ====================================== #
 
 build-all:
-	@docker-compose -f docker-compose.dev.yaml build
+	@docker-compose -f docker-compose.dev.yaml -p url-collector build
 
 # ==================================== BUILDING IMAGES ====================================== #
 
 run:
-	@docker-compose -f docker-compose.dev.yaml up -d
+	@docker-compose -f docker-compose.dev.yaml -p url-collector up -d
 
 # =================================== STOPPING IMAGES ======================================= #
 
 stop:
-	@docker-compose -f docker-compose.dev.yaml stop
+	@docker-compose -f docker-compose.dev.yaml -p url-collector stop
 
 # ================================= RESTARTING ALL SERVICES ================================= #
 
@@ -28,22 +28,22 @@ restart: stop run
 # ========================= CLEAN DEV DOCKER ENVIRONMENT (PURGE DB) ========================= #
 
 clean-dev:
-	docker-compose -f ./docker-compose.dev.yaml rm
+	docker-compose -f ./docker-compose.dev.yaml -p url-collector rm
 
 # =========================== RUN APP IN A DEV DOCKER ENVIRONMENT =========================== #
 
 dev:
-	docker-compose -f ./docker-compose.dev.yaml up
+	docker-compose -f ./docker-compose.dev.yaml -p url-collector up
 
 # ========================================= LOGS ============================================ #
 
 attach-console:
-	docker-compose -f docker-compose.dev.yaml logs --follow backend
+	docker-compose -f docker-compose.dev.yaml -p url-collector logs --follow backend
 
 logs: attach-console
 
 logs-back:
-	docker-compose -f docker-compose.dev.yaml logs --follow backend
+	docker-compose -f docker-compose.dev.yaml -p url-collector logs --follow backend
 
 # =================================== REMOVING CONTAINERS =================================== #
 
@@ -66,4 +66,4 @@ rebuild: stop-all rm-all build-all run
 # ==================================== OPTING INTO SHELL ==================================== #
 
 sh-collector:
-	docker-compose -f ./docker-compose.dev.yaml run backend sh
+	docker-compose -f ./docker-compose.dev.yaml -p url-collector run backend sh
